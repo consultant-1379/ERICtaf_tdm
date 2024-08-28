@@ -1,0 +1,11 @@
+spring:
+    profiles: ldap-customer
+
+ldap:
+    url: ldap://enmteagat:389
+    user: admin
+    manager: cn=admin,dc=agat,dc=enm,dc=org
+    password: adminpassword
+    search.base: ou=People,dc=agat,dc=enm,dc=org
+    dnPattern1: uid={0},ou=People,dc=agat,dc=enm,dc=org
+    dnPattern2: uid={0},ou=People,dc=agat,dc=enm,dc=org

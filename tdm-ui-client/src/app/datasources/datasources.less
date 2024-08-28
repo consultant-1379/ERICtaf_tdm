@@ -1,0 +1,70 @@
+@margin-base-small: 5px;
+@margin-base-medium: 10px;
+@padding-base-small: 5px;
+@padding-row-horizontal: 15px;
+@toolbar-bg: #e8e8e8;
+
+.ds-control-container {
+    margin-bottom: @margin-base-medium;
+}
+
+.btn-toolbar {
+    background-color: @toolbar-bg;
+    margin-left: 0;
+    padding: 4px 5px;
+}
+
+.dsForm {
+    &-Alert {
+        float: right;
+        display: inline-block;
+        margin: 0px;
+        font-size: 11px;
+        line-height: 1.5;
+        font-weight: bold;
+    }
+    &-HeaderRow {
+        display: flex;
+        align-items: flex-end;
+    }
+    &-MetaRow {
+        .angucomplete-dropdown {
+            overflow-y: auto;
+            max-height: 150px;
+            margin-top: 0px;
+        }
+    }
+    &-Name {
+        margin-bottom: 0px;
+        margin-top: @margin-base-medium;
+        border: none;
+        outline: none;
+
+        min-width: 200px;
+        &[contenteditable] {
+            color: @gray-light;
+            &::after {
+                font-size: @font-size-small;
+                content: " (click to edit)";
+            }
+            &:focus::after {
+                content: none;
+            }
+        }
+    }
+    &-Error {
+        border-bottom: 1px solid #c31c15;
+    }
+    &-ControlButton {
+        float: right;
+        margin-left: @margin-base-small;
+        margin-right: @margin-base-small;
+    }
+    &-HeaderDivider {
+        margin-top: @margin-base-medium;
+    }
+}
+
+
+
+

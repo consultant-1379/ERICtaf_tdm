@@ -1,0 +1,29 @@
+<div class="dsHistory">
+    <div class="modal-header">
+        <h3 class="modal-title">Version History</h3>
+    </div>
+    <div class="modal-body">
+        <div ng-show="!vm.hasVersions()">
+            No History to display
+        </div>
+        <table ng-init="vm.getHistory()" ng-show="vm.hasVersions()" class="table">
+            <thead>
+            <tr class="table-header">
+                <th class="table-head" ng-repeat="heading in vm.columnHeadings">{{heading}}</th>
+            </tr>
+            </thead>
+
+            <tbody class="table-body">
+                <tr class="table-body-tr" ng-repeat="dataSourceMeta in vm.dataSourcesMetaData.data">
+                    <td class="table-col"  ng-repeat="col in dataSourceMeta">
+                    {{col}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-info" type="button" ng-click="vm.cancel()">
+            Close
+        </button>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+.docs {
+    &-menu {
+        hr {
+            margin: 10px 0;
+        }
+        a.active {
+            color: #333;
+            &:hover, &:focus {
+                background-color: @body-bg;
+                cursor: text;
+                outline: 0;
+            }
+        }
+        .affix-top {
+            #backToTop {
+                display: none;
+            }
+        }
+
+        @media (min-width: @screen-sm) {
+            margin-top: 5em;
+        }
+        @media (max-width: @screen-xs-max) {
+            .affix {
+                position: static !important;
+            }
+        }
+    }
+
+    &-template {
+        h2, h3 {
+            border-bottom: 1px solid #ccc;
+        }
+        hr {
+            border-color: #ccc;
+        }
+    }
+
+    &-screenshot {
+        display: block;
+        border: 1px solid #ccc;
+        margin-bottom: 1em;
+        max-width: 100%;
+        height: auto;
+    }
+
+    a:hover {
+        cursor: pointer;
+    }
+
+    .fa {
+        font-size: 14px;
+    }
+}

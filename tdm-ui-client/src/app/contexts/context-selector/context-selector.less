@@ -1,0 +1,29 @@
+.context-tree {
+    overflow: auto;
+    max-height: 500px;
+
+    & .tree-node {
+        display: inline-block;
+        border-radius: @border-radius-base;
+        padding: 2px 6px;
+
+        &.no-children i {
+            opacity: .4;
+        }
+    }
+}
+
+.context-details {
+    &.ng-hide {
+        opacity: 0;
+    }
+}
+
+.tms-fld-version.ui-select-container {
+    width: 250px;
+}
+
+.bg-primary {
+    color: @text-color;
+    background-color: @link-selected-color;
+}

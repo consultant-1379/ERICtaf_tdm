@@ -1,0 +1,40 @@
+version: "3"
+services:
+  TDM_backend:
+    image: armdocker.rnd.ericsson.se/proj_taf_tdm/tdm-server:${TDM_VERSION}
+    container_name: "TDM_backend"
+    restart: "always"
+    ports:
+      - "80:8888"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    volumes:
+      - /opt/store/volumes/tdm-logs:/var/log/tdm
+    logging:
+      options:
+        max-size: "1g"
+        max-file: "3"
+  cAdvisor:
+    image: armdocker.rnd.ericsson.se/proj_taf_tdm/google/cadvisor:latest
+    container_name: "cAdvisor"
+    stdin_open: true
+    restart: "always"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    tty: true
+    ports:
+      - "9090:8080"
+  node-exporter:
+    image: armdocker.rnd.ericsson.se/proj_taf_tdm/prom/node-exporter:latest
+    container_name: "node-exporter"
+    restart: "always"
+    ports:
+      - "9100:9100"
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    network_mode: "host"

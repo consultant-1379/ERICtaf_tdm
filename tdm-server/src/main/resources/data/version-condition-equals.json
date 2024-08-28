@@ -1,0 +1,8 @@
+{
+    "major": ": {$eq: %1$s},",
+    "minor": ": {$eq: %2$s},",
+    "build": ": {$eq: %3$s},",
+    "snapshot": ": {$eq: %4$s}"
+}
+
+

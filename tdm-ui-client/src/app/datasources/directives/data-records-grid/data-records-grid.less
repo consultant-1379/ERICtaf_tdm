@@ -1,0 +1,53 @@
+@ds-grid-header-height: 34px;
+@ds-grid-grid-height: 400px;
+
+.dsGrid {
+    padding-left: @padding-row-horizontal;
+    padding-right: @padding-row-horizontal;
+
+    &-Header {
+        height: @ds-grid-header-height;
+    }
+
+    &-Grid {
+        height: @ds-grid-grid-height;
+    }
+
+    &-Alert {
+        margin-left: @margin-base-medium;
+    }
+
+    &-ColumnPopover {
+        padding: @padding-base-small;
+
+        .form-group {
+            min-height: 70px;
+            min-width: 202px;
+            margin-bottom: @margin-base-small;
+        }
+
+        .help-block {
+            margin-bottom: 0px;
+        }
+
+        button {
+            float: right;
+            margin-top: @margin-base-small;
+            margin-bottom: @margin-base-small;
+        }
+    }
+    &-Table, &-TableControl {
+        padding-left: @padding-row-horizontal;
+        padding-right: @padding-row-horizontal;
+    }
+
+    &-TableControl {
+        h3 {
+            margin-top: 0px;
+            float: left
+        }
+        .btn {
+            margin-left: @margin-base-medium;
+        }
+    }
+}

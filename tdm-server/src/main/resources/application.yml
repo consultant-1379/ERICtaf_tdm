@@ -1,0 +1,89 @@
+#http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#common-application-properties
+
+# Spring Boot
+spring:
+    profiles.active: dev
+    main.banner-mode: "off"
+    jackson:
+        date-format: yyyy-MM-dd'T'HH:mm:ss.SSS
+        serialization:
+            INDENT_OUTPUT: true
+    data.mongodb:
+        host: localhost
+        port: 5555
+        database: tdm
+        backup_host:
+    session:
+        store-type: hazelcast
+        hazelcast:
+            flush-mode: immediate
+
+endpoints:
+    jmx.enabled: false
+    actuator.enabled: false
+    jolokia.enabled: false
+
+server:
+    port: 8888
+    socket: localhost
+    additionalPorts: 8444,8555
+
+# Contact info for API doc generation
+contact:
+    name: TAF Team
+    url: https://taf.seli.wh.rnd.internal.ericsson.com
+    email: PDLTAFRAME@pdl.internal.ericsson.com
+
+#Build Info
+info.build:
+    version: @project.version@
+    name: @project.name@
+    artifact: @project.artifactId@
+
+#Integration Endpoints
+remote:
+    tce:
+        url:
+            base: http://atvts3300.athtem.eei.ericsson.se
+            app: ${remote.tce.url.base}/tce/
+            api: ${remote.tce.url.base}/api/tce/
+        cron: 0 0 * * * *
+    ci:
+        testware:
+            url: https://cifwk-oss.lmera.ericsson.se/getLatestTestware/
+            cron: 0 0 * * * *
+
+#EMAIL
+email:
+    protocol: smtp
+    host: localhost
+    port: 25
+    from: taf-tdm@ericsson.com
+    username:
+    password:
+    smtp:
+        auth: false
+        starttls:
+            enable: false
+
+#encryption
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    password: clavis
+
+ldap:
+  ldiff: users.ldif
+
+mock:
+  contexts: data/contexts-dev.json
+  users: data/users-dev.json
+  testware: data/testware-groups-dev.xml
+
+# Actuator
+management.security.enabled: false
+management.context-path: /api
+
+# JMX
+endpoints.jolokia.enabled: true
+spring.jmx.enabled: true

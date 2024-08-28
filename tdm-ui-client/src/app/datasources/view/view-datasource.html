@@ -1,0 +1,188 @@
+<div class="dsView-Details">
+    <div class="row dsForm-HeaderRow">
+        <div class="col-lg-8  col-md-6 col-xs-6">
+            <h1 class="dsForm-Name">{{vm.dataSourceIdentity.name}}</h1>
+        </div>
+        <div class="col-lg-7 col-md-6 col-xs-6">
+            <button id="editDatasourceButton" class="btn btn-info dsView-Details-Button"
+                    ng-disabled="vm.isPendingRequest() || ! vm.getUserValidation()" ng-if="vm.firstVersionSelected()"
+                    ui-sref="base.contexts.datasources.view.edit({dataSourceId:vm.dataSourceIdentity.id})">
+                Edit
+            </button>
+            <button id="copyDatasourceButton" class="btn btn-default dsView-Details-Button"
+                    ng-click="vm.copyDataSource()" ng-disabled="! vm.getUserValidation()">
+                Copy
+            </button>
+            <i class="fa fa-history fa-2x dsForm-Version"
+               tooltip-placement="top-right"
+               uib-tooltip="History For Data Source"
+               aria-hidden="true"
+               ng-click="vm.showAllByVersion()">
+
+            </i>
+            <select id="dataSourceVersionSelect" ng-model="vm.selectedVersion" class="form-control dsView-Version"
+                    ng-options="version.label for version in vm.versions"
+                    ng-change="vm.onVersionChange(vm.selectedVersion)">
+            </select>
+
+        </div>
+    </div>
+
+    <hr class="dsForm-HeaderDivider">
+
+    <div class="dsApproval">
+        <div class="row dsApproval-Status">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <label>Approval Status</label>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <span class="label label-default" id="dsUnapproved" ng-show="vm.approvalStatus === vm.approvalStatusConstants.UNAPPROVED">Unapproved</span>
+                <span class="label label-info" id="dsPending" ng-show="vm.approvalStatus === vm.approvalStatusConstants.PENDING">Pending</span>
+                <span class="label label-danger" id="dsRejected" ng-show="vm.approvalStatus === vm.approvalStatusConstants.REJECTED">Rejected</span>
+                <span class="label label-success" id="dsApproved" ng-show="vm.approvalStatus === vm.approvalStatusConstants.APPROVED">Approved</span>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <button id="reviewButton" class="btn btn-info dsView-Details-Button"
+                        ng-if="vm.canApproveOrReject()" ng-click="vm.goToReviewPage()">
+                    Review
+                </button>
+                <button id="unApproveButton" class="btn btn-danger dsView-Details-Button"
+                        ng-if="vm.canUnApprove()" ng-click="vm.unApprove()" ng-disabled="! vm.getUserValidation()">
+                    Un-approve
+                </button>
+                <button id="cancelRequestButton" class="btn btn-default dsView-Details-Button"
+                        ng-if="vm.canCancelRequest()" ng-click="vm.cancelRequest()" ng-disabled="! vm.getUserValidation()">
+                    Cancel Request
+                </button>
+                <button id="requestApprovalButton" class="btn btn-info dsView-Details-Button"
+                        ng-if="vm.canRequestApproval()" ng-click="vm.requestApproval()" ng-disabled="! vm.getUserValidation()">
+                    Request Approval
+                </button>
+                <button id="addReviewerButton" class="btn btn-info dsView-Details-Button"
+                        ng-if="vm.canCancelRequest()" ng-click="vm.requestApproval()" ng-disabled="! vm.getUserValidation()">
+                    Add Reviewer
+                </button>
+            </div>
+        </div>
+
+        <div class="row dsLabel" ng-show="vm.isNotSnapshot()">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <label>Label</label>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                <div class="popover-wrapper">
+                    <a href="#" editable-text="vm.label" onbeforesave="vm.saveLabel($data)">{{vm.label || 'Click to Edit!' }}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row dsApproval-Reviewers" ng-show="vm.isPendingRequest()">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <label>Reviewers</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <p>{{vm.reviewers}}</p>
+            </div>
+        </div>
+
+        <div class="row dsApproval-Reviewers" ng-show="vm.isPendingRequest()">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <label>Review Requester</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <p>{{vm.reviewRequester}}</p>
+            </div>
+        </div>
+
+        <div class="row dsApproval-Comment" ng-show="!vm.isPendingRequest()">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <label>Comment</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <p>{{vm.comment}}</p>
+            </div>
+        </div>
+        <div class="row dsApproval-Comment" ng-show="vm.isApproved()">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <label>Approved By</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <p>{{vm.approver}}</p>
+            </div>
+        </div>
+        <div class="row dsApproval-Comment" ng-show="vm.isRejected()">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <label>Rejected By</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <p>{{vm.approver}}</p>
+            </div>
+        </div>
+        <div class="row dsApproval-Comment" ng-show="vm.isUnApproved()">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <label>Unapproved By</label>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <p>{{vm.approver}}</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="dsForm-HeaderDivider">
+
+    <div class="row dsContext">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <label>Context</label>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-7 col-xs-8">
+            <p id="dataSourceContext">{{vm.contextPath}}
+                <i class="fa fa-clipboard fa-2x dsClip"
+                   tooltip-placement="top-left"
+                   uib-tooltip="Copy to clipboard"
+                   aria-hidden="true"
+                   ng-click="vm.copyContext(vm.context.path)">
+                </i></p>
+        </div>
+    </div>
+    <div class="row dsContext">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <label>Data Source ID</label>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-7 col-xs-8">
+            <p id="datasourceId">{{vm.selectedDatasource}}
+                <i class="fa fa-clipboard fa-2x dsClip"
+                   tooltip-placement="bottom-left"
+                   uib-tooltip="Copy to clipboard"
+                   aria-hidden="true"
+                   ng-click="vm.copyContext(vm.selectedDatasource)">
+                </i>
+            </p>
+        </div>
+    </div>
+
+    <div class="row dsContext">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <label>Group</label>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-7 col-xs-8">
+            <p id="groupId">{{vm.dataSourceIdentity.group}}
+                <i class="fa fa-clipboard fa-2x dsClip"
+                   tooltip-placement="bottom-left"
+                   uib-tooltip="Copy to clipboard"
+                   aria-hidden="true"
+                   ng-click="vm.copyContext(vm.dataSourceIdentity.group)">
+                </i>
+            </p>
+        </div>
+    </div>
+
+    <hr class="dsForm-HeaderDivider">
+
+    <datarecords-grid
+        ng-if="vm.gridOptions"
+        options="vm.gridOptions"
+        table="vm.tableOptions"
+        read-only=true
+        approval-status="vm.approvalStatus"
+    ></datarecords-grid>
+</div>

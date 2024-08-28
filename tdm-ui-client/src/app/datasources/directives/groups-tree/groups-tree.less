@@ -1,0 +1,45 @@
+.gsTree-container {
+    position: absolute;
+    min-height: @ds-grid-grid-height;
+    height: e('calc(100% - @{ds-grid-header-height})');
+    width: 95%;
+}
+
+.gsTree {
+    border: 1px solid #d4d4d4;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 95%;
+
+    .ag-header-viewport {
+        background: #f3f3f3;
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(1, #ffffff));
+        border-bottom: 1px solid #d4d4d4;
+    }
+
+    .ag-header, .ag-header-row, .ag-header-overlay {
+        height: 34px!important;
+    }
+
+    .ag-body {
+        padding-top: 34px!important;
+    }
+
+    .ag-body-container, .ag-cell {
+        width: 100%!important;
+    }
+}
+
+.fa-minus-circle:before {
+    padding: 0px 5px;
+}
+
+.fa-plus-circle:before {
+    padding: 0px 5px;
+}
+
+.ag-row-selected {
+    background-color: lightblue;
+}
+

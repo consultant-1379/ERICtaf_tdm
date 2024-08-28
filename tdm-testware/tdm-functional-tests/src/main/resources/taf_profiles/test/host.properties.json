@@ -1,0 +1,33 @@
+[
+  {
+    "hostname": "tdm",
+    "ip": "atvts3406.athtem.eei.ericsson.se",
+    "type": "UNKNOWN",
+    "users": [
+      {
+        "username": "taf",
+        "password": "taf",
+        "type": "web"
+      }
+    ],
+    "ports": {
+      "http": 8888,
+      "ssh": 22
+    }
+  },
+  {
+    "hostname": "UiTestGrid",
+    "ip": "141.137.232.251",
+    "type": "SELENIUM_GRID",
+    "users": [
+      {
+        "username": "root",
+        "password": "shroot",
+        "type": "admin"
+      }
+    ],
+    "ports": {
+      "http": 4444
+    }
+  }
+]

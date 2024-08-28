@@ -1,0 +1,15 @@
+<label>Group</label>
+<angucomplete-alt
+    disable-input="vm.readOnly"
+    field-required="true"
+    placeholder="ex: group1 "
+    pause="100"
+    minlength="1"
+    initial-value="vm.initValue"
+    selected-object="vm.onSelect"
+    input-changed="vm.onInputChange"
+    local-data="vm.availableGroups"
+    search-fields="{{vm.fieldName}}"
+    title-field="{{vm.fieldName}}"
+    match-class="gs-HighlightGroup"
+    input-class="form-control dsForm-GroupInput"/>

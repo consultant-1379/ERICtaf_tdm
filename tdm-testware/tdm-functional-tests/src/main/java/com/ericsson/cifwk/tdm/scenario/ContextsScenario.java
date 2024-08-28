@@ -1,0 +1,50 @@
+package com.ericsson.cifwk.tdm.scenario;
+
+import com.ericsson.cifwk.taf.TafTestBase;
+import com.ericsson.cifwk.taf.annotations.TestId;
+import com.ericsson.cifwk.taf.scenario.TestScenario;
+import com.ericsson.cifwk.tdm.HostResolver;
+import com.ericsson.cifwk.tdm.ScreenShotExceptionHandler;
+import com.ericsson.cifwk.tdm.flows.ContextFlows;
+import com.ericsson.cifwk.tdm.flows.LoginFlows;
+import com.ericsson.cifwk.tdm.operators.TDMOperator;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import javax.inject.Inject;
+
+import static com.ericsson.cifwk.taf.scenario.TestScenarios.runner;
+import static com.ericsson.cifwk.taf.scenario.TestScenarios.scenario;
+
+/**
+ * Created by ekonsla on 13/05/2016.
+ */
+public class ContextsScenario extends TafTestBase {
+
+    @Inject
+    private TDMOperator operator;
+
+    @Inject
+    private LoginFlows loginFlows;
+
+    @Inject
+    private ContextFlows contextFlows;
+
+    @BeforeMethod
+    public void setUp() {
+        operator.init(HostResolver.resolve());
+    }
+
+    @Test
+    @TestId(id = "TAF_TDM_004")
+    public void verifyContextsPresentScenario() {
+        TestScenario scenario = scenario("Verify Contexts Scenario")
+                .addFlow(loginFlows.loginFlow())
+                .addFlow(contextFlows.verifyContextsPresent())
+                .addFlow(loginFlows.logoutFlow())
+                .build();
+
+        ScreenShotExceptionHandler screenShotExceptionHandler = new ScreenShotExceptionHandler(operator.getBrowser());
+        runner().withDefaultExceptionHandler(screenShotExceptionHandler).build().start(scenario);
+    }
+}

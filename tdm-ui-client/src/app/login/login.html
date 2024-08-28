@@ -1,0 +1,46 @@
+<div class="login-Holder">
+    <div class="login-Inner">
+        <div class="login-EricssonLogo"></div>
+        <div class="login-Body">
+            <div class="login-Title"> TAF Test Data Management</div>
+            <form name="vm.loginForm" ng-submit="vm.loginSubmit(vm.loginForm.$valid)" novalidate>
+                <div class="row container-fluid">
+                    <div class="col-xs-9 col-sm-5 login-Column">
+                        <input id="username" name="username"
+                               type="text" value="" autofocus="autofocus" placeholder="Username"
+                               class="form-control wMargin login-Username"
+                               ng-model="vm.credentials.username"
+                               ng-class="{'login-Error': vm.usernameHasError()}"
+                               ng-change="vm.clearLoginError()"
+                               required/>
+                    </div>
+                    <div class="col-xs-9 col-sm-5 login-Column">
+                        <input id="password" name="password"
+                               type="password" value="" placeholder="Password"
+                               class="form-control wMargin login-Password"
+                               ng-model="vm.credentials.password"
+                               ng-class="{'login-Error': vm.passwordHasError()}"
+                               ng-change="vm.clearLoginError()"
+                               required/>
+                    </div>
+                    <div class="col-xs-2 col-sm-2 login-Column">
+                        <button id="loginButton" type="submit" class="btn btn-default wMargin login-Button">
+                            <i class="fa fa-chevron-right fa-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row login-MessagesBox"
+                     ng-show="vm.hasErrors()"
+                     ng-messages="vm.errorMessages">
+                    <div ng-message="requiredCredentials">Please enter a username and password.</div>
+                    <div ng-message="requiredUsername">Please enter a username.</div>
+                    <div ng-message="requiredPassword">Please enter a password.</div>
+                    <div ng-message="credentials">Invalid credentials.</div>
+                    <div ng-message="unexpected">Something went wrong.</div>
+                </div>
+                <div class="row login-PassRemind"></div>
+            </form>
+        </div>
+        <p class="login-Copy">© Ericsson Enterprise AB, 2015. All rights reserved.</p>
+    </div>
+</div>

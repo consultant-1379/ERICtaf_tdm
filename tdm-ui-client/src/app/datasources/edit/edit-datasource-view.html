@@ -1,0 +1,57 @@
+<div ncy-breadcrumb></div>
+
+<div class="row dsForm-HeaderRow">
+    <div class="col-lg-10  col-md-9 col-xs-8">
+        <h1 contenteditable class="dsForm-Name"
+            ng-class="{ 'dsForm-Error': vm.errorInName }"
+            ng-model="vm.dataSourceIdentity.name"></h1>
+    </div>
+    <div class="col-lg-2 col-md-3 col-xs-4">
+        <button type="button" class="dsForm-ControlButton btn btn-info" ui-sref="base.contexts.datasources.view" ui-sref-opts="{reload: true}">Cancel</button>
+        <button type="button" class="dsForm-ControlButton btn btn-success" ng-click="vm.save()" ng-disabled="vm.isDisabled()">Save</button>
+    </div>
+</div>
+
+<hr class="dsForm-HeaderDivider">
+
+<div class="row dsForm-MetaRow">
+    <div class="col-lg-2 col-md-2 col-xs-12">
+        <label for="version">Version
+            <i class="fa fa-history fa-lg dsForm-History"
+               tooltip-placement="top-right"
+               uib-tooltip="History For Data Source"
+               aria-hidden="true"
+               ng-click="vm.showAllByVersion()">
+            </i>
+        </label>
+        <div ng-class="{ 'has-error': vm.errorInVersion }">
+            <input type="text" id="version" ng-model="vm.dataSourceIdentity.version" class="form-control"
+                    ng-change="vm.editVersionChange(vm.dataSourceIdentity.version)">
+            </input>
+            <div class="help-block" ng-if="vm.errorInVersion">
+                {{vm.dataSourceEditConstants.errorInVersionMessage}}
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-xs-12" ng-class="{ 'has-error': vm.errorInGroup }">
+        <div class="form-group">
+            <group-auto-complete-input
+                init-value="vm.selectedGroup"
+                available-groups="vm.availableGroups"
+                on-select="vm.groupAutoCompleteEntrySelected"
+                on-input-change="vm.groupAutoCompleteInputChange"
+                field-name="groupName"
+            />
+        </div>
+    </div>
+</div>
+
+<hr class="dsForm-HeaderDivider">
+
+<datarecords-grid
+    ng-if="vm.gridOptions"
+    options="vm.gridOptions"
+    table="vm.tableOptions"
+    error="vm.errorInDataRecords"
+    read-only=false
+/>

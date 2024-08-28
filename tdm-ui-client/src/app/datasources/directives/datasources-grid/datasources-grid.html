@@ -1,0 +1,41 @@
+<div class="row dsGrid">
+    <div class="row dsGrid-Header">
+        <div class="row dsGrid-TableControl">
+            <div class="col-lg-8  col-md-8 col-xs-8">
+                <h3>Data Sources</h3>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-4">
+                <button id="deleteButton"
+                        type="button" class="dsView-Details-Button btn btn-danger btn-sm"
+                        ng-if="vm.hasRowsSelected()"
+                        ng-disabled="vm.rootScope.loading || vm.isPendingRequest() || !vm.hasAccess()"
+                        confirm-click="vm.deleteSelected()"
+                        confirm-message="Do you really want to delete data source {{vm.selectedRow().name}}?"
+                        confirm-second-message="Warning: All the labels will be removed!">
+                    Delete
+                </button>
+
+                <button id="editButton"
+                        type="button" class="dsView-Details-Button btn btn-info btn-sm"
+                        ng-if="vm.hasRowsSelected()"
+                        ng-disabled="vm.isPendingRequest() || !vm.hasAccess()"
+                        ng-click="vm.editSelected()">
+                    Edit
+                </button>
+                <button id="viewButton" type="button" class="dsView-Details-Button btn btn-info btn-sm"
+                        ng-if="vm.hasRowsSelected()"
+                        ng-click="vm.viewSelected()">
+                    View
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row dsGrid-Table">
+        <div class="grid dsGrid-Grid"
+             ui-grid="vm.gridOptions"
+             ui-grid-selection>
+        </div>
+    </div>
+</div>
+

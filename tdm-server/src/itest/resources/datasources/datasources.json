@@ -1,0 +1,187 @@
+[
+  {
+    "identity": {
+      "version": "0.0.1",
+      "name": "DS1",
+      "group": "com.ericsson",
+      "context": "",
+      "contextId": "systemId-1"
+    },
+    "records": [
+      {
+        "values": {
+          "name": "Alderaan",
+          "rotation_period": "24",
+          "orbital_period": "364",
+          "diameter": "12500",
+          "climate": "temperate",
+          "gravity": "1 standard",
+          "terrain": "grasslands, mountains",
+          "surface_water": "40",
+          "population": "2000000000"
+        }
+      },
+      {
+        "values": {
+          "name": "Yavin IV",
+          "rotation_period": "24",
+          "orbital_period": "4818",
+          "diameter": "10200",
+          "climate": "temperate, tropical",
+          "gravity": "1 standard",
+          "terrain": "jungle, rainforests",
+          "surface_water": "8",
+          "population": "1000"
+        }
+      }
+    ]
+  },
+  {
+    "identity": {
+      "version": "0.0.1",
+      "name": "DS2",
+      "group": "com.ericsson.taf",
+      "context": "",
+      "contextId": "systemId-2"
+    },
+    "records": [
+      {
+        "values": {
+          "name": "Alderaan",
+          "rotation_period": "24",
+          "orbital_period": "364",
+          "diameter": "12500",
+          "climate": "temperate",
+          "gravity": "1 standard",
+          "terrain": "grasslands, mountains",
+          "surface_water": "40",
+          "population": "2000000000"
+        }
+      },
+      {
+        "values": {
+          "name": "Yavin IV",
+          "rotation_period": "24",
+          "orbital_period": "4818",
+          "diameter": "10200",
+          "climate": "temperate, tropical",
+          "gravity": "1 standard",
+          "terrain": "jungle, rainforests",
+          "surface_water": "8",
+          "population": "1000"
+        }
+      }
+    ]
+  },
+  {
+    "identity": {
+      "version": "0.0.1",
+      "name": "DS3",
+      "group": "com.ericsson.tms",
+      "context": "",
+      "contextId": "systemId-3"
+    },
+    "records": [
+      {
+        "values": {
+          "name": "Alderaan",
+          "rotation_period": "24",
+          "orbital_period": "364",
+          "diameter": "12500",
+          "climate": "temperate",
+          "gravity": "1 standard",
+          "terrain": "grasslands, mountains",
+          "surface_water": "40",
+          "population": "2000000000"
+        }
+      },
+      {
+        "values": {
+          "name": "Yavin IV",
+          "rotation_period": "24",
+          "orbital_period": "4818",
+          "diameter": "10200",
+          "climate": "temperate, tropical",
+          "gravity": "1 standard",
+          "terrain": "jungle, rainforests",
+          "surface_water": "8",
+          "population": "1000"
+        }
+      }
+    ]
+  },
+  {
+    "identity": {
+      "version": "0.0.1",
+      "name": "DS4",
+      "group": "host.netsim.111",
+      "context": "",
+      "contextId": "systemId-4"
+    },
+    "records": [
+      {
+        "values": {
+          "name": "Alderaan",
+          "rotation_period": "24",
+          "orbital_period": "364",
+          "diameter": "12500",
+          "climate": "temperate",
+          "gravity": "1 standard",
+          "terrain": "grasslands, mountains",
+          "surface_water": "40",
+          "population": "2000000000"
+        }
+      },
+      {
+        "values": {
+          "name": "Yavin IV",
+          "rotation_period": "24",
+          "orbital_period": "4818",
+          "diameter": "10200",
+          "climate": "temperate, tropical",
+          "gravity": "1 standard",
+          "terrain": "jungle, rainforests",
+          "surface_water": "8",
+          "population": "1000"
+        }
+      }
+    ]
+  },
+  {
+    "identity": {
+      "version": "0.0.1",
+      "name": "DS5",
+      "group": "host.netsim.222",
+      "context": "",
+      "contextId": "systemId-5"
+    },
+    "records": [
+      {
+        "values": {
+          "name": "Alderaan",
+          "rotation_period": "24",
+          "orbital_period": "364",
+          "diameter": "12500",
+          "climate": "temperate",
+          "gravity": "1 standard",
+          "terrain": "grasslands, mountains",
+          "surface_water": "40",
+          "population": "2000000000"
+        }
+      },
+      {
+        "values": {
+          "name": "Yavin IV",
+          "rotation_period": "24",
+          "orbital_period": "4818",
+          "diameter": "10200",
+          "climate": "temperate, tropical",
+          "gravity": "1 standard",
+          "terrain": "jungle, rainforests",
+          "surface_water": "8",
+          "population": "1000"
+        }
+      }
+    ]
+  }
+]

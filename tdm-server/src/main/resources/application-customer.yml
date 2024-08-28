@@ -1,0 +1,29 @@
+spring:
+    profiles: customer
+    profiles.include: ldap-customer
+    data.mongodb:
+        host: mongodb
+        port: 27017
+        backup_host:
+
+server:
+    ssl:
+        enabled: true
+        key-store-type: PKCS12
+        key-store: keystore.p12
+        key-store-password: ldappassword
+        key-alias: tomcat
+    http:
+        port: 8444
+
+mock:
+  contexts: data/contexts-customers.json
+  users: data/users-customers.json
+  testware: data/testware-groups-customers.xml
+
+#Integration Endpoints
+remote:
+    tce:
+        url:
+            base: http://security_application_not_supplied
+

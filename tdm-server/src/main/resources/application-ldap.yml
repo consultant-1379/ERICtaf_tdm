@@ -1,0 +1,10 @@
+spring:
+    profiles: ldap
+
+ldap:
+    url: ldap://ldap-egad.internal.ericsson.com:3268
+    user: ATTAFEGAD@ericsson.se
+    password: ENC(WSkpzqgU6nn2weLRcj7quzxIWYC94bep9pSUF9iLzrg=)
+    search.base: OU=ID,OU=Data,dc=ericsson,DC=se
+    dnPattern1: CN={0},OU=CA,OU=User,OU=P001,OU=ID,OU=Data,dc=ericsson,DC=se
+    dnPattern2: CN={0},OU=External,OU=P017,OU=ID,OU=Data,DC=ericsson,DC=se

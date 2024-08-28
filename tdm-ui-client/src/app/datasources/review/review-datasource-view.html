@@ -1,0 +1,50 @@
+<div ncy-breadcrumb></div>
+<div class="row dsForm-Header">
+    <div class="col-lg-8 col-md-6 col-xs-6">
+        <h1 class="dsForm-Name">{{vm.dataSourceIdentity.name}}</h1>
+    </div>
+    <button id="rejectButton" class="btn btn-danger dsView-Details-Button"
+            ng-if="vm.canApproveOrReject()" ng-click="vm.rejectRequest()">
+        Reject
+    </button>
+    <button id="approveButton" class="btn btn-success dsView-Details-Button"
+            ng-if="vm.canApproveOrReject()" ng-click="vm.approveRequest()">
+        Approve
+    </button>
+    <span class="help-block" ng-show="!vm.canApproveOrReject()&&vm.isPendingRequest()">
+        {{vm.noAccessErrorMessage}}
+    </span>
+</div>
+
+<hr class="dsForm-HeaderDivider">
+
+<div class="row dsApproval-Reviewers" ng-show="vm.isPendingRequest()">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        <label>Reviewers</label>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <p>{{vm.reviewers}}</p>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        <label>Reviewer Requester</label>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <p>{{vm.reviewRequester}}</p>
+    </div>
+</div>
+
+<div ng-if="!vm.isPendingRequest()" class="help-block" ng-class="{ 'has-error' : !vm.isPendingRequest()}">
+    {{vm.noOpenReviewErrorMessage}}
+</div>
+
+<hr class="dsForm-HeaderDivider">
+
+
+<datarecords-grid
+    ng-if="vm.gridOptions && vm.isPendingRequest()"
+    options="vm.gridOptions"
+    table="vm.tableOptions"
+    read-only=true
+    approval-status="vm.approvalStatus"
+/>
+

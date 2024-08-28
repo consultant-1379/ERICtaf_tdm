@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Context Acceptance Tests" parallel="false" thread-count="1">
+    <test name="Context Scenarios">
+        <classes>
+            <class name="com.ericsson.cifwk.tdm.scenario.ContextsScenario"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,13 @@
+<div class="footer clearfix text-muted">
+    <div class="container">
+        <div ng-if="vm.date" class="pull-left">
+            &copy; {{ vm.date | date:'yyyy' }} Ericsson
+        </div>
+        <div class="pull-right">
+            <ul class="list-inline">
+                <li ng-if="vm.application.$resolved">Version: {{vm.application.version}}</li>
+<!--                <li><a href={{vm.restApiUrl}} target="_blank">REST API</a></li>  -->
+            </ul>
+        </div>
+    </div>
+</div>

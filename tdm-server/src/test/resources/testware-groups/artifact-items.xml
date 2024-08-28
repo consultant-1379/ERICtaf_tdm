@@ -1,0 +1,30 @@
+<latest-testware>
+    <testwareArtifact>
+        <groupId>group1</groupId>
+        <artifactId>artifact1</artifactId>
+        <version>1.1.1</version>
+        <dateCreated>2017-03-03 16:42:21</dateCreated>
+        <testPom>testpom1.pom</testPom>
+    </testwareArtifact>
+    <testwareArtifact>
+        <groupId>group3</groupId>
+        <artifactId>artifact3</artifactId>
+        <version>3.3.3</version>
+        <dateCreated>2017-02-08 16:23:33</dateCreated>
+        <testPom>testpom3.pom</testPom>
+    </testwareArtifact>
+    <testwareArtifact>
+        <groupId>group2</groupId>
+        <artifactId>artifact2</artifactId>
+        <version>2.2.2</version>
+        <dateCreated>2017-02-20 17:08:49</dateCreated>
+        <testPom>testpom2.pom</testPom>
+    </testwareArtifact>
+    <testwareArtifact>
+        <groupId>group2</groupId>
+        <artifactId>artifact2</artifactId>
+        <version>2.2.2</version>
+        <dateCreated>2017-02-20 17:08:49</dateCreated>
+        <testPom>testpom2.pom</testPom>
+    </testwareArtifact>
+</latest-testware>

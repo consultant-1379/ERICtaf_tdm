@@ -1,0 +1,10 @@
+{
+  "directory": "bower_components",
+  "proxy": "http://www-proxy.lmera.ericsson.se:8080",
+  "https-proxy": "http://www-proxy.lmera.ericsson.se:8080",
+  "registry": {
+    "search": [
+      "https://registry.bower.io"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+<div class="dsCommentApproval">
+    <div class="modal-header">
+        <h3 class="modal-title">
+            <span class="title.text">
+                <span ng-if="vm.isApprove()">Approve comment</span>
+                <span ng-if="vm.isReject()">Reject comment</span>
+                <span ng-if="vm.isUnApprove()">Un-approval Comment</span>
+            </span>
+            <span>
+            <button id="helpButton" class="modal-title modal-help" ng-click="vm.goToHelp()">
+                <a>
+                    <i class="fa fa-question-circle"></i>
+                </a>
+            </button>
+        </span>
+        </h3>
+    </div>
+    <div class="modal-body">
+        <p ng-if="vm.isApprove()">Enter an optional approval comment</p>
+        <p ng-if="vm.isReject()">Enter a mandatory reject comment</p>
+        <p ng-if="vm.isUnApprove()">Enter a mandatory un-approval comment</p>
+        <textarea ng-model="vm.comment" placeholder="Comment" autofocus></textarea>
+    </div>
+    <div class="modal-footer">
+        <button id="dsRequestApproval-Approve" class="btn btn-success" type="button"
+                ng-click="vm.sendDecision()" ng-if="vm.isApprove()">
+            Approve
+        </button>
+        <button id="dsRequestApproval-Reject" class="btn btn-danger" type="button"
+                ng-click="vm.sendDecision()" ng-if="vm.isReject()" ng-disabled="!vm.canSend()">
+            Reject
+        </button>
+        <button id="dsRequestApproval-UnApprove" class="btn btn-success" type="button"
+                ng-click="vm.sendDecision()" ng-if="vm.isUnApprove()" ng-disabled="!vm.canSend()">
+            Un-approve
+        </button>
+        <button id="dsRequestApproval-Cancel" class="btn btn-info" type="button"
+                ng-click="vm.cancel()">
+            Cancel
+        </button>
+    </div>
+</div>

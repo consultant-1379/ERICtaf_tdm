@@ -1,0 +1,12 @@
+<latest-testware>
+    <testwareArtifact>
+        <groupId>com.ericsson.oss.services.testware</groupId>
+        <artifactId>ERICTAFFakePackage</artifactId>
+        <version>0.0.1</version>
+        <dateCreated>2017-03-03 16:42:21</dateCreated>
+        <testPom>
+            https://link_to_artifacts_nexus_pom_file
+        </testPom>
+    </testwareArtifact>
+
+</latest-testware>

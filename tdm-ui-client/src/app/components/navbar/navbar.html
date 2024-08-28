@@ -1,0 +1,52 @@
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-logo"></div>
+    <div class="navbar-header">
+        <a class="navbar-brand" ng-click="vm.goToMain()">
+            TAF Test Data Management
+        </a>
+        <button class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target=".navbar-collapse"
+                ng-click="vm.navCollapsed = !vm.navCollapsed"
+                ng-hide="vm.isLogin()">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <div class="navbar-collapse collapse"
+         uib-collapse="vm.navCollapsed">
+        <ul class="nav navbar-nav navbar-right">
+            <li ng-show="vm.isAuthenticated()">
+                <p id="userName">
+                    <i class="fa fa-user"></i>
+                    {{vm.userName()}}
+                </p>
+            </li>
+            <li>
+                <a id="helpButton" ng-click="vm.goToHelp()">
+                    <i class="fa fa-question-circle"></i>
+                    Help
+                </a>
+            </li>
+ <!--           <li>
+                <a id="dashboardButton" ng-click="vm.goToDashboard()">
+                    <i class="fa fa-bar-chart"></i>
+                    Dashboard
+                </a>
+            </li> -->
+            <li ng-hide="vm.isAuthenticated() || vm.isLogin()">
+                <a id="signInButton" ng-click="vm.signIn()">
+                    <i class="fa fa-sign-in"></i>
+                    Sign in
+                </a>
+            </li>
+            <li ng-show="vm.isAuthenticated()">
+                <a id="signOutButton" ng-click="vm.signOut()">
+                    <i class="fa fa-sign-out"></i>
+                    Sign out
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

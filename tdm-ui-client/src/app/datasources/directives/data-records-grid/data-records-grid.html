@@ -1,0 +1,58 @@
+<div class="row dsGrid">
+    <div class="row dsGrid-Header">
+        <div class="dsGrid-TableControl">
+            <h3>Data Records</h3>
+
+            <button
+                ng-if="!vm.readOnly"
+                ng-click="vm.openAddColumnPopUp()"
+                type="button" class="btn btn-default btn-sm">
+                <i class="fa fa-plus"></i> Add column
+            </button>
+
+            <button
+                ng-if="!vm.readOnly"
+                type="button" class="btn btn-default btn-sm"
+                ng-click="vm.addRow()">
+                <i class="fa fa-plus"></i> Add row
+            </button>
+
+            <button type="button" class="btn btn-default btn-sm"
+                    ng-class="{ 'active': vm.gridOptions.enableFiltering }"
+                    ng-click="vm.toggleFiltering()">
+                <i class="fa fa-filter"></i>
+            </button>
+
+            <button id="csvImportButton"
+                    ng-click="vm.showCsvImportDialog()"
+                    type="button" class="btn btn-default btn-sm"
+                    ng-disabled="vm.hasData()"
+                    ng-hide="vm.importedData||!vm.displayImportButton">
+                <i class="fa fa-upload"></i> Import CSV
+            </button>
+
+            <button type="button" class="btn btn-danger btn-sm"
+                    ng-if="!vm.readOnly"
+                    ng-show="vm.hasRowsSelected()"
+                    confirm-click="vm.deleteSelectedRows()"
+                    confirm-message="Do you really want to delete selected rows?">
+                <i class="fa fa-times"></i> Delete selected rows
+            </button>
+
+            <p id="dsGrid-errorAlert" class="dsForm-Alert dsGrid-Alert alert alert-danger" ng-show="vm.error.message">{{vm.error.message}}</p>
+        </div>
+    </div>
+
+    <div class="row dsGrid-Table">
+        <div class="grid dsGrid-Grid"
+             ui-grid="vm.gridOptions"
+             ui-grid-edit
+             ui-grid-cellNav
+             ui-grid-selection
+             ui-grid-importer
+             ui-grid-exporter
+             ui-grid-resize-columns
+             ui-grid-move-columns>
+        </div>
+    </div>
+</div>

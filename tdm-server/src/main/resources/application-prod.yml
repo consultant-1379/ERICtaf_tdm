@@ -1,0 +1,24 @@
+spring:
+    profiles: prod
+    profiles.include: ldap
+    data.mongodb:
+        host: tdm-mongo-1577-p.seli.gic.ericsson.se
+        port: 27017
+        backup_host: tdm-mongo-1577-s.seli.gic.ericsson.se
+        backup_port: 27017
+        database: tdm
+        user: taf_user
+        password: 6xUDJQz0ouN9a35
+
+server:
+    socket: seliius20759.seli.gic.ericsson.se
+
+remote:
+    tce:
+        url:
+            base: https://trs-prod.seli.wh.rnd.internal.ericsson.com
+
+email:
+    host: mail.lmera.ericsson.se
+
+

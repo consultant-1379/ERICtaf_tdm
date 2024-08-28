@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Approval and Label Acceptance Tests">
+    <test name="Approval and Label Scenarios">
+        <classes>
+            <class name="com.ericsson.cifwk.tdm.scenario.ApprovalAndLabelScenario"/>
+        </classes>
+    </test>
+</suite>

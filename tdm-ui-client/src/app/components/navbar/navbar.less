@@ -1,0 +1,90 @@
+.navbar {
+    min-height: 44px;
+    background-image: -webkit-linear-gradient(270deg, #fff 0, #f4f4f4 100%);
+    background-image: -o-linear-gradient(270deg, #fff 0, #f4f4f4 100%);
+    background-image: linear-gradient(180deg, #fff 0, #f4f4f4 100%);
+
+    .navbar-logo {
+        float: left;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background: url('../assets/systemBar/econ01.svg') no-repeat center 14px transparent;
+        -webkit-background-size: 20px 20px;
+        background-size: 20px;
+    }
+}
+
+.navbar-fixed-top::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 4px;
+    font-size: 0;
+    top: 0;
+    left: 0;
+    z-index: 1035;
+    background: #0066b3;
+    background: -o-linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);
+    background: -webkit-linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(.1, #a2c517), color-stop(.3, #009046), color-stop(.5, #0082b6), color-stop(.75, #151f77), color-stop(1, #db0050));
+    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #a2c517), color-stop(30%, #009046), color-stop(50%, #0082b6), color-stop(75%, #151f77), to(#db0050));
+    background: linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);
+}
+
+.navbar-default {
+    .navbar-brand {
+        color: #777777;
+        cursor: pointer;
+        font-size: 17px;
+        padding: 14px 10px 8px;
+        height: 44px;
+        &:hover {
+            color: #00a9d4;
+            background-color: transparent;
+        }
+        &:focus {
+            color: #00a9d4;
+            background-color: transparent;
+        }
+    }
+}
+
+.navbar .nav {
+    li {
+        a:hover {
+            color: #00a9d4;
+            cursor: pointer;
+            background-color: transparent;
+        }
+        a, p {
+            padding: 14px 20px 10px 0;
+            color: #777777;
+            .fa {
+                font-size: 14px;
+            }
+        }
+        p {
+            cursor: default;
+            line-height: 20px;
+            margin: 0;
+        }
+    }
+}
+
+.navbar-collapse {
+    .navbar-fixed-top & {
+        padding-right: @navbar-padding-horizontal;
+    }
+    &.collapsing,
+    &.in.collapse {
+        .nav {
+            li {
+                a, p {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+}

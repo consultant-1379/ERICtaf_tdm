@@ -1,0 +1,33 @@
+<div class="docs">
+    <div ncy-breadcrumb></div>
+    <div class="docs-menu col-md-2 col-sm-4">
+        <div class="panel panel-default" bs-affix data-offset-top="-50">
+            <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a ui-sref="documentation.overview" ui-sref-active="active">Overview</a></li>
+                    <li><a ui-sref="documentation.commons" ui-sref-active="active">User Interface</a></li>
+                    <li><a ui-sref="documentation.tutorials" ui-sref-active="active">Tutorials</a></li>
+<!--                <hr/>
+                    <li><a ui-sref="documentation.datasource-list" ui-sref-active="active">Data Source List</a></li>
+                    <li><a ui-sref="documentation.datasource-create" ui-sref-active="active">Create Data Source</a></li>
+                    <li><a ui-sref="documentation.datasource-view" ui-sref-active="active">View Data Source</a></li>
+                    <li><a ui-sref="documentation.datasource-edit" ui-sref-active="active">Edit Data Source</a></li>
+                    <li><a ui-sref="documentation.datasource-copy" ui-sref-active="active">Copy Data Source</a></li>
+                    <li><a ui-sref="documentation.datasource-approve" ui-sref-active="active">Approval Process</a></li>
+                    <li><a ui-sref="documentation.datasource-label" ui-sref-active="active">Label Data Source</a></li>
+                    <li><a ui-sref="documentation.user-roles" ui-sref-active="active">User Roles</a></li>
+                    <hr/>
+                    <li><a ui-sref="documentation.usage-in-taf-tests" ui-sref-active="active">Usage in TAF tests</a></li>
+                    <li><a ui-sref="documentation.test-data-orchestration" ui-sref-active="active">Test Data Orchestration</a></li>-->
+                    <li id="backToTop">
+                        <hr/>
+                        <a ng-click="vm.scrollTo()">
+                            <i class="fa fa-arrow-circle-up"></i> back to top
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div ui-view class="docs-content col-md-10 col-sm-8"></div>
+</div>

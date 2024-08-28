@@ -1,0 +1,15 @@
+<div class="context-selector">
+    <div class="context-tree well well-sm" ng-if="vm.tree">
+        <div ui-tree
+             data-drag-enabled="false"
+             data-empty-placeholder-enabled="false">
+            <ul ui-tree-nodes
+                ng-model="vm.tree">
+                <li ui-tree-node
+                    ng-repeat="node in vm.tree"
+                    ng-include="'app/contexts/context-tree/context-tree-node.html'">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="dsRenameColumnModal">
+    <form name="renameColumnForm">
+        <div class="modal-body form-group" ng-class="{ 'has-error': renameColumnForm.columnName.$invalid || vm.columnWithSuchNameExists() || vm.columnInvalidCharacters() }">
+            <label class="control-label" for="columnName">Column Name</label>
+            <input type="text" required class="form-control"id="columnName" name="columnName" placeholder="column name" ng-model="vm.columnName" required autofocus>
+            <span class="help-block" ng-show="vm.columnWithSuchNameExists()">Column with such name already exists.</span>
+            <span class="help-block" ng-show="renameColumnForm.columnName.$invalid">Column name is required.</span>
+            <span class="help-block" ng-show="vm.columnInvalidCharacters()">Column contains invalid characters.</span>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-info" type="button" ng-click="vm.cancel()">Cancel</button>
+            <button ng-disabled="!renameColumnForm.$valid || vm.columnWithSuchNameExists() || vm.columnInvalidCharacters()" class="btn btn-primary" type="submit" ng-click="vm.rename()">Rename</button>
+        </div>
+    </form>
+</div>

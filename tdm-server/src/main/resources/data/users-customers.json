@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "username": "user",
+    "email": "user@ericsson.se",
+    "roles": [
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_VIEWER"
+        }
+      },
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_TEST_ENGINEER"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "username": "admin",
+    "email": "admin@ericsson.se",
+    "roles": [
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_TEST_MANAGER"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "username": "anonymousUser",
+    "email": "anonymousUser@ericsson.se",
+    "roles": []
+  }
+]

@@ -1,0 +1,18 @@
+### Java template
+*.class
+*.jar
+*.war
+*.ear
+
+### JetBrains template
+*.iml
+.idea/
+/out/
+target/
+target/target/
+test-output
+
+### Vagrant template
+.vagrant/
+
+dependency-reduced-pom.xml

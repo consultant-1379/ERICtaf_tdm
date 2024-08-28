@@ -1,0 +1,56 @@
+{
+  "name": "tdm-client",
+  "version": "0.1.0",
+  "dependencies": {
+    "angular": "1.6.4",
+    "angular-animate": "1.4.9",
+    "angular-bootstrap": "1.2.5",
+    "angular-breadcrumb": "0.4.1",
+    "angular-cookies": "1.4.9",
+    "angular-messages": "1.4.9",
+    "angular-resource": "1.4.9",
+    "angular-sanitize": "1.4.9",
+    "angular-motion": "0.4.3",
+    "angular-strap": "2.2.4",
+    "angular-toastr": "1.5.0",
+    "font-awesome": "~4.3.0",
+    "angular-touch": "1.4.9",
+    "angular-ui-router": "0.2.15",
+    "ag-grid": "4.0.5",
+    "animate.css": "3.4.0",
+    "bootstrap": "3.3.5",
+    "bootstrap-additions": "0.3.1",
+    "components-font-awesome": "4.5.0",
+    "lodash": "4.1.0",
+    "jquery": "2.1.4",
+    "moment": "2.10.6",
+    "angucomplete-alt": "2.2.0",
+    "marked": "^0.3.6",
+    "angular-marked": "^1.2.2",
+    "angular-ui-grid": "4.2.0",
+    "angular-ui-tree": "2.5.0",
+    "csv-js": "1.1.1",
+    "ng-tags-input": "3.2.0",
+    "angular-xeditable": "0.8.0",
+    "angular-nvd3": "1.0.9"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/fonts/glyphicons-halflings-regular.eot",
+        "dist/fonts/glyphicons-halflings-regular.svg",
+        "dist/fonts/glyphicons-halflings-regular.ttf",
+        "dist/fonts/glyphicons-halflings-regular.woff",
+        "dist/fonts/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "ag-grid": {
+      "main": "dist/ag-grid.min.js"
+    }
+  },
+  "resolutions": {
+    "jquery": "2.1.4",
+    "angular": "1.4.9"
+  }
+}

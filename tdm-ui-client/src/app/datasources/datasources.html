@@ -1,0 +1,36 @@
+<div ncy-breadcrumb></div>
+
+<div>
+    <div class="row ds-control-container">
+        <div class="col-sm-12 btn-toolbar">
+            <div tooltip-placement="top-left"
+                 uib-tooltip="You do not have permission to create a Datasource within this context."
+                 tooltip-enable="!vm.getUserValidation()">
+                <button id="createDatasourceButton" type="button" class="btn btn-default"
+                        ui-sref="base.contexts.datasources.create"
+                        ng-disabled="!vm.getUserValidation()">
+                    New
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row row-eq-height">
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xs-12">
+            <div class="row dsGrid-Header">
+                <div class="dsGrid-TableControl">
+                    <h3>Groups</h3>
+                </div>
+            </div>
+            <groups-tree ng-if="vm.groupsData"
+                         groups-data="vm.groupsData"
+                         selected-group-name="vm.selectedGroupName"
+                         selected-datasource="vm.selectedDatasource"
+                         selected-context="vm.selectedContext"
+                         on-select="vm.onGroupSelected(node)"
+                         class="gsTree-container"></groups-tree>
+        </div>
+        <div class="col-sm-9 col-md-9 col-lg-9 col-xs-12">
+            <div ui-view></div>
+        </div>
+    </div>
+</div>

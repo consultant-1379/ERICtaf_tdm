@@ -1,0 +1,29 @@
+<latest-testware>
+    <testwareArtifact>
+        <groupId>com.ericsson.oss.services.cm.export.testware</groupId>
+        <artifactId>ERICTAF3gppexporttransformation_CXP9031331</artifactId>
+        <version>1.21.3</version>
+        <dateCreated>2017-03-03 16:42:21</dateCreated>
+        <testPom>
+            https://arm1s11-eiffel004.eiffel.gic.ericsson.se:8443/nexus/content/repositories/releases/com/ericsson/oss/services/cm/export/test-pom-transformer-3gpp-testware/1.21.3/test-pom-transformer-3gpp-testware-1.21.3.pom
+        </testPom>
+    </testwareArtifact>
+    <testwareArtifact>
+        <groupId>com.ericsson.oss.services.cm.export</groupId>
+        <artifactId>ERICTAF3gppinvexporttransformer_CXP9032221</artifactId>
+        <version>1.17.3</version>
+        <dateCreated>2017-02-20 17:08:49</dateCreated>
+        <testPom>
+            https://arm1s11-eiffel004.eiffel.gic.ericsson.se:8443/nexus/content/repositories/releases/com/ericsson/oss/services/cm/export/test-pom-inventorytransformer3gpp/1.17.3/test-pom-inventorytransformer3gpp-1.17.3.pom
+        </testPom>
+    </testwareArtifact>
+    <testwareArtifact>
+        <groupId>com.ericsson.oss.mediation.cm</groupId>
+        <artifactId>ERICTAF3pprouters_CXP9033842</artifactId>
+        <version>1.2.1</version>
+        <dateCreated>2017-02-08 16:23:33</dateCreated>
+        <testPom>
+            https://arm1s11-eiffel004.eiffel.gic.ericsson.se:8443/nexus/content/repositories/releases/com/ericsson/oss/mediation/cm/test-pom-3pprouters/1.2.1/test-pom-3pprouters-1.2.1.pom
+        </testPom>
+    </testwareArtifact>
+</latest-testware>

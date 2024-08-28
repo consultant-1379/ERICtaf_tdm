@@ -1,0 +1,207 @@
+[
+    {
+        "id": 1129,
+        "username": "viewer",
+        "firstName": "Anamika",
+        "lastName": "John",
+        "email": "anamika.john@ericsson.com",
+        "roles": [
+            {
+                "roleBean": {
+                    "id": 1,
+                    "name": "ROLE_VIEWER",
+                    "assignable": false
+                },
+                "contextId": "systemId-1",
+                "granted": true
+            }
+        ]
+    },
+    {
+        "id": 1130,
+        "username": "manager",
+        "firstName": "Anders",
+        "lastName": "Broman",
+        "email": "anders.w.broman@ericsson.com",
+        "roles": [
+            {
+                "roleBean": {
+                    "id": 1,
+                    "name": "ROLE_VIEWER",
+                    "assignable": false
+                },
+                "contextId": "systemId-2",
+                "granted": true
+            },
+            {
+                "roleBean": {
+                    "id": 3,
+                    "name": "ROLE_TEST_MANAGER",
+                    "assignable": true
+                },
+                "contextId": "systemId-2",
+                "granted": true
+            }
+        ]
+    },
+    {
+        "id": 1131,
+        "username": "admin",
+        "firstName": "Brian",
+        "lastName": "Moran",
+        "email": "brian.moran@ericsson.com",
+        "roles": [
+            {
+                "roleBean": {
+                    "id": 1,
+                    "name": "ROLE_VIEWER",
+                    "assignable": false
+                },
+                "contextId": "systemId-2",
+                "granted": true
+            },
+            {
+                "roleBean": {
+                    "id": 4,
+                    "name": "ROLE_CONTEXT_ADMIN",
+                    "assignable": true
+                },
+                "contextId": "systemId-2",
+                "granted": true
+            }
+        ]
+    },
+    {
+    "id": 1132,
+    "username": "security",
+    "firstName": "Charles",
+    "lastName": "Karlsson",
+    "email": "charles.karlsson@ericsson.se",
+    "roles": [
+        {
+            "roleBean": {
+                "id": 5,
+                "name": "ROLE_TEST_MANAGER",
+                "assignable": true
+            },
+            "contextId": "systemId-1",
+            "granted": true
+        }
+    ]
+    },
+    {
+        "username": "taf",
+        "email": "oliver.borreson@ericsson.se",
+        "roles": [
+            {
+                "contextId": "systemId-1",
+                "roleBean":
+                {
+                    "name": "ROLE_VIEWER"
+                }
+            },
+            {
+                "contextId": "systemId-1",
+                "roleBean":
+                {
+                    "name": "ROLE_TEST_ENGINEER"
+                }
+            },
+            {
+                "contextId": "systemId-1",
+                "roleBean":
+                {
+                    "name": "ROLE_TEST_MANAGER"
+                }
+            }
+        ]
+    },
+    {
+        "id": 1134,
+        "username": "taf2",
+        "email": "matilda.eliason@ericsson.se",
+        "roles": [
+            {
+                "contextId": "systemId-1",
+                "roleBean":
+                {
+                    "name": "ROLE_VIEWER"
+                }
+            },
+            {
+                "contextId": "systemId-1",
+                "roleBean":
+                {
+                    "name": "ROLE_TEST_ENGINEER"
+                }
+            },
+            {
+                "contextId": "systemId-1",
+                "roleBean":
+                {
+                    "name": "ROLE_TEST_MANAGER"
+                }
+            }
+        ]
+    },
+    {
+        "id": 1133,
+        "username": "anonymousUser",
+        "email": "test@somewhere.com",
+        "roles": [
+            {
+                "contextId": "systemId-1",
+                "roleBean":
+                {
+                    "name": "ROLE_VIEWER"
+                }
+            },
+            {
+                "contextId": "systemId-1",
+                "roleBean":
+                {
+                    "name": "ROLE_TEST_ENGINEER"
+                }
+            },
+            {
+                "contextId": "systemId-1",
+                "granted": true,
+                "roleBean":
+                {
+                    "name": "ROLE_TEST_MANAGER"
+                }
+            },
+            {
+                "contextId": "systemId-2",
+                "granted": true,
+                "roleBean":
+                {
+                    "name": "ROLE_TEST_MANAGER"
+                }
+            },
+            {
+                "contextId": "systemId-3",
+                "granted": true,
+                "roleBean":
+                {
+                    "name": "ROLE_TEST_MANAGER"
+                }
+            }
+        ]
+    },
+    {
+        "id": 1135,
+        "username": "testuser",
+        "firstName": "Avery",
+        "lastName": "Dunne",
+        "email": "avery.dunne@ericsson.com",
+        "roles": [
+            {
+                "roleBean": {
+                    "name": "ROLE_SECURITY_ADMIN"
+                },
+                "contextId": "systemId-1"
+            }
+        ]
+    }
+]

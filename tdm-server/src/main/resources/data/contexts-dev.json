@@ -1,0 +1,494 @@
+[
+    {
+      "id": "systemId-1",
+      "name": "System",
+      "parentId": null,
+      "activeModelId": null
+    },
+    {
+      "id": "0be26bbd-c7bf-4b11-a456-4d9b0a74ec2a",
+      "name": "NAM",
+      "parentId": "fe9b4a46-3c00-4cf9-8845-bff8299a1248",
+      "activeModelId": 1001
+    },
+    {
+      "id": "2aac2ebd-6bb6-4db1-8f58-c8ab01efa0a8",
+      "name": "Assure",
+      "parentId": "0be26bbd-c7bf-4b11-a456-4d9b0a74ec2a",
+      "activeModelId": 1002
+    },
+    {
+      "id": "82f2322a-3fd6-49f5-bae0-98e74c2cb3f1",
+      "name": "Eiffel",
+      "parentId": "0be26bbd-c7bf-4b11-a456-4d9b0a74ec2a",
+      "activeModelId": 1003
+    },
+    {
+      "id": "c2649066-4812-436f-ae7f-b62d07dff871",
+      "name": "OSSRC",
+      "parentId": "0be26bbd-c7bf-4b11-a456-4d9b0a74ec2a",
+      "activeModelId": 1004
+    },
+    {
+      "id": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "name": "ENM",
+      "parentId": "0be26bbd-c7bf-4b11-a456-4d9b0a74ec2a",
+      "activeModelId": 1005
+    },
+    {
+      "id": "b9192db0-e487-4dc0-bc05-712da4b53345",
+      "name": "ASSURE",
+      "parentId": "2aac2ebd-6bb6-4db1-8f58-c8ab01efa0a8",
+      "activeModelId": 1006
+    },
+    {
+      "id": "ab785757-a5ed-4efb-9524-348fb7a98ab5",
+      "name": "CI_FrameworkTeam_PDUOSS",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1007
+    },
+    {
+      "id": "258bc73d-780a-48dc-b0ac-5dc071ff2e46",
+      "name": "DURA CI",
+      "parentId": "82f2322a-3fd6-49f5-bae0-98e74c2cb3f1",
+      "activeModelId": 1008
+    },
+    {
+      "id": "105a8d52-bf26-4725-8abf-21dfa682fd2c",
+      "name": "SimNet Simulated Networks",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1009
+    },
+    {
+      "id": "c8ad5c79-24d2-4efb-b054-b82c7dbffbff",
+      "name": "OSSRC",
+      "parentId": "c2649066-4812-436f-ae7f-b62d07dff871",
+      "activeModelId": 1010
+    },
+    {
+      "id": "0a57d266-5f72-4ec5-94b7-4de952fc1efc",
+      "name": "TOR",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1011
+    },
+    {
+      "id": "43a9b16d-9b30-4b8a-bed3-4e24d65fd42a",
+      "name": "TOR Deployment",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1012
+    },
+    {
+      "id": "ef2c512e-e72b-4ef1-8135-048475f00789",
+      "name": "TOR Project",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1013
+    },
+    {
+      "id": "27e88c62-1cd6-4870-ba1d-b7fc5032cb6e",
+      "name": "TOR Security Identity and Access Manager",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1014
+    },
+    {
+      "id": "282dd6be-9f97-4a56-8c37-3dcdb3f6e65a",
+      "name": "TOR Upgrade Manager",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1015
+    },
+    {
+      "id": "d2eab294-92a9-408d-8a00-0bfeefbc2693",
+      "name": "TOR_FM",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1016
+    },
+    {
+      "id": "1610d72c-22e3-49c4-9a6f-6bcaee553fe0",
+      "name": "TOR_FT1_ServiceFramework",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1017
+    },
+    {
+      "id": "0a7186b6-82d5-44f5-8397-f06256278c8d",
+      "name": "TOR_FT2_Mediation",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1018
+    },
+    {
+      "id": "be0d8da8-4cd4-4124-83d0-4aa2a9cc27f3",
+      "name": "TOR_FT3_UI",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1019
+    },
+    {
+      "id": "a4a87310-7333-475d-9e25-3699855708dd",
+      "name": "TOR_FT4_UI_SSO",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1020
+    },
+    {
+      "id": "1f337afe-b90e-40c0-8ae8-acb78a985265",
+      "name": "TOR_FT5_Streaming",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1021
+    },
+    {
+      "id": "7d46fb9e-073f-40f2-a675-c176da96bbd0",
+      "name": "BSIM/TOR",
+      "parentId": "c2649066-4812-436f-ae7f-b62d07dff871",
+      "activeModelId": 1022
+    },
+    {
+      "id": "4d80f2d7-d9b9-461b-adbd-77f465a3ea42",
+      "name": "CDS",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1023
+    },
+    {
+      "id": "b88cda97-76b8-4cc3-9866-ab99903fc06d",
+      "name": "Deployment Management Tool",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1024
+    },
+    {
+      "id": "a7a1c08d-69d6-41f6-a004-14d31f326856",
+      "name": "LITP CDS",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1025
+    },
+    {
+      "id": "8ba1eac6-7eb0-46c1-a535-28819aff3dce",
+      "name": "LITP TEST",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1026
+    },
+    {
+      "id": "9f46a20d-dd9d-4472-9bf9-d8427a498594",
+      "name": "PLM & Customer Support",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1027
+    },
+    {
+      "id": "d828b0fd-e916-4adf-a621-1c2a416d9c3c",
+      "name": "SON",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1028
+    },
+    {
+      "id": "1b045a43-1de0-4b04-8972-e0b0d2fa8d34",
+      "name": "TOR Customer Projects",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1029
+    },
+    {
+      "id": "3fc34c8d-b401-4cf5-88ba-859463dbb200",
+      "name": "TOR DDC DDP",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1030
+    },
+    {
+      "id": "062a432e-4958-4565-b647-76119d621702",
+      "name": "TOR PM Initiation",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1031
+    },
+    {
+      "id": "3ff5a5f7-c290-468f-96ce-7e8e13a84b63",
+      "name": "TOR Security",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1032
+    },
+    {
+      "id": "32b57fe6-4cfd-4cf7-ad16-4fb67f3da961",
+      "name": "TOR_CM",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1033
+    },
+    {
+      "id": "36186912-5e7b-45f3-92f4-2fecfa1f1266",
+      "name": "TOR Release Verification",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1034
+    },
+    {
+      "id": "cac47439-0e54-4e3c-acca-4f25cf53e85c",
+      "name": "OSS-RC RV Automation",
+      "parentId": "c2649066-4812-436f-ae7f-b62d07dff871",
+      "activeModelId": 1035
+    },
+    {
+      "id": "22846310-823a-46f2-afdb-8a033707947f",
+      "name": "WLRCM",
+      "parentId": "c2649066-4812-436f-ae7f-b62d07dff871",
+      "activeModelId": 1036
+    },
+    {
+      "id": "6cd98c6b-2967-42fc-9815-2d058a7e4223",
+      "name": "OSS WASS",
+      "parentId": "c2649066-4812-436f-ae7f-b62d07dff871",
+      "activeModelId": 1037
+    },
+    {
+      "id": "9b7524ca-4abf-4637-a6fe-6329444a40f4",
+      "name": "SON Viz CI transformation",
+      "parentId": "c2649066-4812-436f-ae7f-b62d07dff871",
+      "activeModelId": 1038
+    },
+    {
+      "id": "eed94db8-75b4-478c-8ddd-40e2a95e9139",
+      "name": "DEFT-FRT-CentralRegression",
+      "parentId": "c2649066-4812-436f-ae7f-b62d07dff871",
+      "activeModelId": 1039
+    },
+    {
+      "id": "77dfa5e8-78d2-401e-9529-c358ff7bf38c",
+      "name": "BSIM-AUTOMATION",
+      "parentId": "c2649066-4812-436f-ae7f-b62d07dff871",
+      "activeModelId": 1040
+    },
+    {
+      "id": "62dde0af-c7fe-4266-a588-895a8a37e5d3",
+      "name": "TAF Training and Testing",
+      "parentId": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "activeModelId": 1041
+    },
+    {
+      "id": "a6fb2565-c895-4f0f-a441-b2e180ad4746",
+      "name": "PLM ASSURE",
+      "parentId": "2aac2ebd-6bb6-4db1-8f58-c8ab01efa0a8",
+      "activeModelId": 1042
+    },
+    {
+      "id": "systemId-3",
+      "name": "Sandbox",
+      "parentId": "systemId-1",
+      "activeModelId": 1043
+    },
+    {
+      "id": "a973e692-81e7-4352-a8d6-6cd7b66486be",
+      "name": "tests",
+      "parentId": "systemId-3",
+      "activeModelId": 1044
+    },
+    {
+      "id": "a0d5ab70-2093-4d17-85de-bef2ece5475d",
+      "name": "PIR",
+      "parentId": "systemId-3",
+      "activeModelId": 1046
+    },
+    {
+      "id": "494f43de-43be-4a23-87c4-27cb39522901",
+      "name": "GTMS pilot DURA level",
+      "parentId": "9f64af0c-f115-4d41-aea6-bd8f3675bc4a",
+      "activeModelId": 1059
+    },
+    {
+      "id": "9f64af0c-f115-4d41-aea6-bd8f3675bc4a",
+      "name": "GTMS pilot Ericsson level",
+      "parentId": "systemId-3",
+      "activeModelId": 1061
+    },
+    {
+      "id": "55d4beaa-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "ENMeshed Security Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4bdd8-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Deployment Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4bcd4-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Auto Provisioning Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4b82e-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "RV Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4b770-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "PM Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4b6a8-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "FM Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4b5d6-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "CM Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4b4d2-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "AP Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4b2ac-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Maintrack",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "ENM",
+      "parentId": "systemId-1",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4c940-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "SHM Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4ca4e-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Security Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4ceae-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "TEI Security Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4cddc-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "SkyFall Security Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4cf6c-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Transport Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4d02a-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "UTF",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4d0e8-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Whitestar RV Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4d1e8-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Other",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4c7b0-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Monitoring Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "dae683cd-9b3f-4883-908d-68598a046dac",
+      "name": "BUCI",
+      "parentId": "systemId-1",
+      "activeModelId": null
+    },
+    {
+      "id": "39a4e790-4b69-4632-ab26-b094b3d2690a",
+      "name": "DGen2",
+      "parentId": "548e75a3-5f0c-408d-a44c-d4a03e73325e",
+      "activeModelId": null
+    },
+    {
+      "id": "39a4e790-4b69-4632-ab26-b094b3d2690a",
+      "name": "DGen2",
+      "parentId": "548e75a3-5f0c-408d-a44c-d4a03e73325e",
+      "activeModelId": null
+    },
+    {
+      "id": "56259446-b358-49e6-87f7-8b10c5db0405",
+      "name": "DURA",
+      "parentId": "7cf0083c-ab05-45d2-8faa-1b27933ae597",
+      "activeModelId": null
+    },
+    {
+      "id": "systemId-2",
+      "name": "BUCI",
+      "parentId": "systemId-1",
+      "activeModelId": null
+    },
+    {
+      "id": "7cf0083c-ab05-45d2-8faa-1b27933ae597",
+      "name": "BURA",
+      "parentId": "systemId-1",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4d2e8-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Other RFA",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4c882-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Oceans Deployement Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "fe9b4a46-3c00-4cf9-8845-bff8299a1248",
+      "name": "DUAC",
+      "parentId": "dae683cd-9b3f-4883-908d-68598a046dac",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4c6f2-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Maintrack Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4c634-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Legolas Key Components",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4c562-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Key Components Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4c1ac-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "KVM Physical Rollout",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4c0ee-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "Insert Name Here",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    },
+    {
+      "id": "55d4bf7c-e9e1-11e5-9ce9-5e5517507c66",
+      "name": "ERICPol Security Tribe",
+      "parentId": "55d4b2aa-e9e1-11e5-9ce9-5e5517507c66",
+      "activeModelId": null
+    }
+]

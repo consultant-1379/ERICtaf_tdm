@@ -1,0 +1,47 @@
+dn: ou=people,dc=springframework,dc=org
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=taf,ou=people,dc=springframework,dc=org
+objectclass: organizationalPerson
+cn: Oliver Borreson
+givenName: Oliver
+sn: Borreson
+mail: oliver.borreson@ericsson.se
+uid: taf
+userPassword: taf
+
+dn: uid=TAF2,ou=people,dc=springframework,dc=org
+objectclass: organizationalPerson
+cn: Matilda Eliason
+givenName: Matilda
+sn: Eliason
+uid: TAF2
+userPassword: taf2
+
+dn: uid=user,ou=people,dc=springframework,dc=org
+objectclass: organizationalPerson
+cn: Charles Karlsson
+givenName: Charles
+sn: Karlsson
+mail: charles.karlsson@ericsson.se
+uid: user
+userPassword: password
+
+dn: uid=itestuser,ou=people,dc=springframework,dc=org
+objectclass: organizationalPerson
+cn: Charles Borreson
+givenName: Charles
+sn: Borreson
+mail: charles.borreson@ericsson.se
+uid: itestuser
+userPassword: password
+
+dn: uid=testuser,ou=people,dc=springframework,dc=org
+objectclass: organizationalPerson
+cn: Avery Dunne
+givenName: Avery
+sn: avery
+mail: avery.dunne@ericsson.se
+uid: testuser
+userPassword: password

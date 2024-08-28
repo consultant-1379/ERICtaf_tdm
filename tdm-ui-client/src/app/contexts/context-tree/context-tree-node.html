@@ -1,0 +1,26 @@
+<div class="tree-node pointer"
+     data-id="{{node.value.id}}"
+     ng-class="{
+        'bg-primary': vm.selected == node,
+        'no-children': node.children.length == 0
+     }">
+    <i ng-click="vm.toggleNode(this)"
+       class="fa pointer"
+       ng-class="{
+            'fa-caret-right': collapsed,
+            'fa-caret-down': !collapsed
+        }"></i>
+    <span id="{{node.value.id}}" ng-click="vm.clickNode(this)">
+        <strong ng-if="vm.trace[node.value.id]">{{node.value.name}}</strong>
+        <span ng-if="!vm.trace[node.value.id]">{{node.value.name}}</span>
+    </span>
+</div>
+<ul ui-tree-nodes
+    ng-model="node.children"
+    class="nav nav-pills nav-stacked"
+    ng-class="{hidden: collapsed}">
+    <li ui-tree-node class="active"
+        ng-repeat="node in node.children"
+        ng-include="'app/contexts/context-tree/context-tree-node.html'">
+    </li>
+</ul>

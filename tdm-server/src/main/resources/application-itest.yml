@@ -1,0 +1,6 @@
+spring:
+    profiles: itest
+    profiles.include: ldap-embedded
+
+email:
+    port: 3025

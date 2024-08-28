@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.ericsson.cifwk.taf.testdatamanagement</groupId>
+        <artifactId>tdm-testware</artifactId>
+        <version>1.0.130-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>tdm-functional-tests</artifactId>
+    <name>TDM Functional Tests</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ericsson.cifwk.taf.testdatamanagement</groupId>
+            <artifactId>tdm-operators</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.cifwk.taf.testdatamanagement</groupId>
+            <artifactId>tdm-datasource</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>scenario-rx-taf-adaptor</artifactId>
+            <version>${taf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

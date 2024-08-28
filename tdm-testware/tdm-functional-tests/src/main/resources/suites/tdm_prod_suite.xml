@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TDM production Scenarios Tests" parallel="false" thread-count="1">
+    <test name="TDM production Scenarios">
+        <classes>
+            <class name="com.ericsson.cifwk.tdm.scenario.TdmDataSourceScenario"/>
+            <class name="com.ericsson.cifwk.tdm.scenario.TdmDataSourceRecordsScenarios"/>
+        </classes>
+    </test>
+</suite>

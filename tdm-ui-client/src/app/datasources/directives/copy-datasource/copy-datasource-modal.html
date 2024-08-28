@@ -1,0 +1,54 @@
+<div class="dsCopyModal">
+    <div class="modal-header">
+        <h3 class="title.text">
+            <span>Copy Data Source</span>
+            <span>
+                <button id="helpButton" class="modal-title modal-help"  ng-click="vm.goToHelp()">
+                    <a>
+                        <i class="fa fa-question-circle"></i>
+                    </a>
+                </button>
+            </span>
+        </h3>
+    </div>
+    <form name="dataSourceCopyForm">
+        <div class="form-group" id="dsCopyModal-VersionInput">
+            <label>Version to copy</label>
+            <select ng-model="vm.currentVersion" class="form-control "
+                    ng-options="version.label for version in vm.versions">
+            </select>
+        </div>
+        <div class="form-group" id="dsCopyModal-VersionBase">
+            <label>Set as base version</label>
+            <input type="checkbox" ng-model="vm.baseVersion">
+        </div>
+        <div class="form-group" id="dsCopyModal-TitleInput" ng-class="{ 'has-error': vm.errorInDataSourceName }">
+            <label>New Data Source Name</label>
+            <input type="text" class="form-control" name="name" placeholder="Data Source name"
+                   ng-model="vm.dataSourceName" ng-change="vm.validateDataSourceName()" autofocus>
+            <div class="help-block" ng-if="vm.errorInDataSourceName">
+                {{vm.errorInDataSourceNameMessage}}
+            </div>
+        </div>
+        <div class="form-group" id="dsCopyModal-ContextInput">
+            <label>New Context</label>
+            <select ng-model="vm.currentContext" class="form-control "
+                    ng-options="context.name for context in vm.contexts"
+                    ng-change="vm.onContextChange(vm.currentContext)">
+            </select>
+        </div>
+        <div class="form-group" id="dsCopyModal-GroupInput" ng-class="{ 'has-error': vm.errorInGroup }">
+            <group-auto-complete-input
+                init-value="vm.currentGroup"
+                available-groups="vm.groups"
+                on-select="vm.groupAutoCompleteEntrySelected"
+                on-input-change="vm.groupAutoCompleteInputChange"
+                field-name="groupName"
+            />
+        </div>
+        <div class="modal-footer">
+            <button id="dsCopyModal-Copy" class="btn btn-primary" type="submit" ng-click="vm.copy()">Copy</button>
+            <button id="dsCopyModal-Cancel" class="btn btn-info" type="button" ng-click="vm.cancel()">Cancel</button>
+        </div>
+    </form>
+</div>

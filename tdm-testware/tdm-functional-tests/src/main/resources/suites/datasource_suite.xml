@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Datasources Acceptance Tests" parallel="false" thread-count="1">
+    <test name="Datasource Scenarios">
+        <classes>
+            <class name="com.ericsson.cifwk.tdm.scenario.DataSourcesScenario"/>
+            <class name="com.ericsson.cifwk.tdm.scenario.DataSourceCopyScenario"/>
+            <class name="com.ericsson.cifwk.tdm.scenario.TdmDataSourceRecordsScenarios"/>
+        </classes>
+    </test>
+</suite>

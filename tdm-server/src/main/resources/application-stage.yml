@@ -1,0 +1,21 @@
+spring:
+    profiles: stage
+    profiles.include: ldap
+    data.mongodb:
+        host: tdmstage-mongo-1560-p.seli.gic.ericsson.se
+        port: 27057
+        user: taf_user
+        password: V7gFHbsMu536Qm1
+        database: tdmstage
+        backup_host:
+        backup_port:
+server:
+    socket: seliius20775.seli.gic.ericsson.se
+
+remote:
+    tce:
+        url:
+            base: https://trs-prod.seli.wh.rnd.internal.ericsson.com
+
+email:
+    host: mail.lmera.ericsson.se

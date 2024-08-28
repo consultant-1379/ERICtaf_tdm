@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="TdmLogFile" fileName="logs/tdm-performance.csv" immediateFlush="false" append="false">
+            <Filters>
+                <!-- First deny warn, error and fatal messages -->
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="fatal" onMatch="DENY" onMismatch="NEUTRAL"/>
+
+                <!-- Then accept info, warn, error, fatal and deny debug/trace -->
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </File>
+
+        <File name="TdmHttpClientLogFile" fileName="logs/tdm-performance-http-client.csv" immediateFlush="false" append="false">
+            <Filters>
+                <!-- First deny warn, error and fatal messages -->
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="fatal" onMatch="DENY" onMismatch="NEUTRAL"/>
+
+                <!-- Then accept info, warn, error, fatal and deny debug/trace -->
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </File>
+
+        <File name="TdmPerformanceDebugFile" fileName="logs/tdm-performance-debug.csv" immediateFlush="false" append="false">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="TdmPerformanceDebugFile" level="debug"/>
+        </Root>
+
+        <Logger name="com.ericsson.cifwk.tdm.TDMPerformanceTest" level="info" includeLocation="true">
+            <AppenderRef ref="TdmLogFile" level="info"/>
+        </Logger>
+
+        <Logger name="com.ericsson.cifwk.tdm.TDMPerformanceUsingHttpClientTest"  level="info" includeLocation="true">
+            <AppenderRef ref="TdmHttpClientLogFile" level="info"/>
+        </Logger>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,124 @@
+[
+  {
+    "id": 1,
+    "username": "taf",
+    "email": "oliver.borreson@ericsson.se",
+    "roles": [
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_VIEWER"
+        }
+      },
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_TEST_ENGINEER"
+        }
+      },
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_TEST_MANAGER"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "username": "TAF2",
+    "email": "matilda.eliason@ericsson.se",
+    "roles": [
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_CONTEXT_ADMIN"
+        }
+      },
+      {
+        "contextId": "NAM",
+        "roleBean": {
+          "name": "ROLE_SECURITY_ADMIN"
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "username": "user",
+    "email": "charles.karlsson@ericsson.se",
+    "roles": [
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_VIEWER"
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "username": "itestuser",
+    "email": "charles.borreson@ericsson.se",
+    "roles": [
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_TEST_ENGINEER"
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "username": "eniakel",
+    "email": "niall.kelly@ericsson.com",
+    "roles": [
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_SECURITY_ADMIN"
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "username": "testuser",
+    "email": "avery.dunne@ericsson.com",
+    "roles": [
+      {
+        "contextId": "0be26bbd-c7bf-4b11-a456-4d9b0a74ec2a",
+        "roleBean": {
+          "name": "ROLE_SECURITY_ADMIN"
+        }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "username": "ekonsla",
+    "email": "jon.snow@ericsson.com",
+    "roles": [
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_SECURITY_ADMIN"
+        }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "username": "enikoal",
+    "email": "eddard.stark@ericsson.com",
+    "roles": [
+      {
+        "contextId": "systemId-1",
+        "roleBean": {
+          "name": "ROLE_SECURITY_ADMIN"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+    {
+      "id": "systemId-1",
+      "name": "System-updated",
+      "parentId": null,
+      "activeModelId": null
+    },
+    {
+      "id": "systemId-2",
+      "name": "PDU-ABC_Updated",
+      "parentId": "systemId-1",
+      "activeModelId": 4
+    },
+    {
+      "id": "systemId-3",
+      "name": "PDU_OSS_Updated",
+      "parentId": "systemId-1",
+      "activeModelId": 4
+    },
+    {
+      "id": "systemId-6",
+      "name": "One More Department",
+      "parentId": "systemId-1",
+      "activeModelId": 4
+    }
+]

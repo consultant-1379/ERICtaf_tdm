@@ -1,0 +1,130 @@
+.login {
+    &-Dialog {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10000;
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    &-Holder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 500px;
+        height: 450px;
+        padding: 20px;
+        background-color: #E9E9E9;
+        min-height: 350px;
+        box-shadow: #999 0 1px 3px;
+        border-radius: 10px;
+    }
+    &-Inner {
+        position: relative;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+    }
+    &-EricssonLogo {
+        background: url('../assets/login/ericssonLogo_blue.svg') 30px 40px no-repeat;
+        height: 100px;
+        width: 100%;
+    }
+    &-Body {
+        position: relative;
+        margin: 60px 50px 0 50px;
+        height: 220px;
+    }
+    &-Title {
+        vertical-align: middle;
+        font-family: EricssonCapitalTT, Arial, sans-serif;
+        font-weight: normal;
+        font-size: 3.2rem;
+        text-transform: uppercase;
+        line-height: 3.6rem;
+        color: #333;
+        margin-bottom: 20px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.1, #a2c517), color-stop(0.3, #009046), color-stop(0.5, #0082b6), color-stop(0.7, #151f77), color-stop(1, #db0050));
+        background-image: linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 70%, #db0050 100%);
+        background-image: -webkit-linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 70%, #db0050 100%);
+    }
+    &-Column {
+        padding-left: 0;
+        padding-right: 6px;
+    }
+    &-MessagesBox {
+        background: url('../assets/login/errorIcon01.svg') 1px center no-repeat transparent;
+        font-size: 1.3rem;
+        vertical-align: middle;
+        line-height: 1.6rem;
+        margin: 6px 0 0 6px;
+        padding-left: 20px;
+        color: #e5182e;
+    }
+
+    &-InputComposition {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    &-Copy {
+        position: absolute;
+        bottom: 0;
+        padding-left: 50px;
+        color: #D2D2D2;
+    }
+
+    &-Error {
+        border-color: #e5182e;
+    }
+    &-Button {
+        padding: 0 12px;
+    }
+
+    @media screen and (max-width: 768px), screen and (max-height: 500px) {
+        &-Holder {
+            position: relative;
+            background-color: white;
+            padding: 0;
+            width: auto;
+            height: auto;
+            margin: 10px 0;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        &-Inner {
+            min-height: 400px;
+        }
+
+        &-Body {
+            margin: 30px 12px 0 12px;
+        }
+
+        &-EricssonLogo {
+            height: 20%;
+            min-height: 80px;
+            background-size: 50px;
+            background-position: 20px 20px;
+        }
+
+        &-MessagesBox {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+
+        &-Copy {
+            position: absolute;
+            bottom: 0.5rem;
+            padding: 0 20px;
+            font-size: 1rem;
+        }
+    }
+}
+

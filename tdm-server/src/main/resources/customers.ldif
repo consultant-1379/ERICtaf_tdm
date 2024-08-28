@@ -1,0 +1,21 @@
+dn: ou=people,dc=springframework,dc=org
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=admin,ou=people,dc=springframework,dc=org
+objectclass: organizationalPerson
+cn: Administrator TDM
+givenName: Administrator
+sn: TDM
+mail: admin@ericsson.se
+uid: admin
+userPassword: admin
+
+dn: uid=user,ou=people,dc=springframework,dc=org
+objectclass: organizationalPerson
+cn: User TDM
+givenName: User
+sn: TDM
+mail: user@ericsson.se
+uid: user
+userPassword: password

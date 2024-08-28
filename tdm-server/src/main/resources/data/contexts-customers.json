@@ -1,0 +1,14 @@
+[
+    {
+      "id": "systemId-1",
+      "name": "System",
+      "parentId": null,
+      "activeModelId": null
+    },
+    {
+      "id": "da608d9f-905d-45a2-bdba-bb187aa94271",
+      "name": "ENM",
+      "parentId": "systemId-1",
+      "activeModelId": null
+    }
+]

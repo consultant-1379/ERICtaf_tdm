@@ -1,0 +1,32 @@
+[
+    {
+      "id": "systemId-1",
+      "name": "System",
+      "parentId": null,
+      "activeModelId": null
+    },
+    {
+      "id": "systemId-2",
+      "name": "PDU-ABC",
+      "parentId": "systemId-1",
+      "activeModelId": 4
+    },
+    {
+      "id": "systemId-4",
+      "name": "PDU-CBA",
+      "parentId": "systemId-2",
+      "activeModelId": 4
+    },
+    {
+      "id": "systemId-3",
+      "name": "PDU_OSS",
+      "parentId": "systemId-1",
+      "activeModelId": 4
+    },
+    {
+      "id": "systemId-5",
+      "name": "PDU_SSO",
+      "parentId": "systemId-3",
+      "activeModelId": 4
+    }
+]

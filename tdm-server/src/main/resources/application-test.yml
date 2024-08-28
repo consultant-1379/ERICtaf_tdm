@@ -1,0 +1,12 @@
+spring:
+    profiles: test
+    profiles.include: ldap-embedded
+    data.mongodb:
+        port: 27017
+
+server:
+    socket: atvts3406.athtem.eei.ericsson.se:8888
+
+email:
+    host: mail.lmera.ericsson.se
+    from: taf-tdm-test@ericsson.com

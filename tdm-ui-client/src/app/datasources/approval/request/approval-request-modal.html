@@ -1,0 +1,40 @@
+<div class="dsRequestApproval">
+    <div class="modal-header">
+        <h3 class="modal-title">Request Approval
+        <span>
+            <button class="modal-title modal-help" id="helpButton" ng-click="vm.goToHelp()">
+                <a>
+                    <i class="fa fa-question-circle"></i>
+                </a>
+            </button>
+        </span>
+        </h3>
+    </div>
+    <div class="modal-body">
+        <p>Enter the <strong>emails</strong> or <strong>signums</strong> of the reviewers</p>
+
+        <tags-input ng-model="vm.selected" placeholder="Reviewers"
+                    key-property="username" display-property="username"
+                    add-from-autocomplete-only="true"
+                    on-tag-adding="vm.checkTag($tag)"
+                  >
+            <auto-complete source="vm.loadReviewers($query)" min-length="2"
+                           load-on-focus="true" load-on-down-arrow="true"
+                           debounce-delay="500" display-property="{{vm.displayProperty}}">
+            </auto-complete>
+
+        </tags-input>
+
+        <p>Enter an optional comment</p>
+        <textarea ng-model="vm.comment" placeholder="Comment" autofocus></textarea>
+    </div>
+    <div class="modal-footer">
+        <button id="dsRequestApproval-Send" class="btn btn-primary" type="button" ng-click="vm.sendRequest()"
+                ng-disabled="!vm.canSend()">
+            Send Request
+        </button>
+        <button id="dsRequestApproval-Cancel" class="btn btn-info" type="button" ng-click="vm.cancel()">
+            Cancel
+        </button>
+    </div>
+</div>

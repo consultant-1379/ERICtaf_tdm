@@ -1,0 +1,6 @@
+spring:
+    profiles: ldap-embedded
+
+ldap:
+    url: ldap://127.0.0.1:33389/dc=springframework,dc=org
+    dnPattern: uid={0},ou=people

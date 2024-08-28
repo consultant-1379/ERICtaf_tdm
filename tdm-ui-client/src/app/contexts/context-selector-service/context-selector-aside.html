@@ -1,0 +1,28 @@
+<div class="aside" tabindex="-1" role="dialog">
+    <div class="aside-dialog">
+        <div class="aside-content">
+            <div class="aside-header">
+                <button type="button"
+                        class="close"
+                        id="tms-btn-choose-close"
+                        ng-click="$hide()">
+                    &times;
+                </button>
+                <h4 class="aside-title">
+                    <span>
+                        <i class="fa fa-folder-open"></i>
+                        Choose context
+                    </span>
+                </h4>
+            </div>
+            <div class="aside-body">
+                <p ng-if="caption">{{caption}}</p>
+                <context-selector selected="$parent.selected"
+                                  contexts="$parent.contexts"
+                                  context-id="{{contextId}}"
+                                  on-node-click="$parent.onNodeClick(treeNode)"
+                                  class="row"></context-selector>
+            </div>
+        </div>
+    </div>
+</div>

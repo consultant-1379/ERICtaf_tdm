@@ -1,0 +1,16 @@
+<div class="dsAddColumnModal">
+    <form name="renameColumnForm">
+        <div class="modal-body form-group" ng-class="{ 'has-error': vm.columnWithSuchNameExists() || vm.columnInvalidCharacters() }">
+            <label class="control-label" for="propertyName">Column name</label>
+            <input id="propertyName" type="text" required class="form-control" placeholder="column name" ng-model="vm.newColumnName" autofocus>
+            <span class="help-block" ng-show="vm.columnInvalidCharacters()">Column contains invalid characters.</span>
+            <span class="help-block" ng-show="vm.columnWithSuchNameExists()">Column with this name already exists.</span>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary btn-sm" type="button"
+                    ng-click="vm.addColumn()"
+                    ng-disabled="!vm.newColumnName || vm.columnWithSuchNameExists() || vm.columnInvalidCharacters()">OK
+            </button>
+        </div>
+    </form>
+</div>

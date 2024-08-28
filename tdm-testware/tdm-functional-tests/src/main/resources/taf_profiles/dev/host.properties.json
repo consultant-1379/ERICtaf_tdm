@@ -1,0 +1,11 @@
+[
+    {
+        "hostname": "tdm",
+        "ip": "127.0.0.1",
+        "type": "UNKNOWN",
+        "users": [
+            {"username": "taf", "password": "taf", "type": "web"}
+        ],
+        "ports": {"http": 8080}
+    }
+]
